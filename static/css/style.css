@@ -1,0 +1,650 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: : 16px;
+}
+body {
+  color: #949494;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.25;
+}
+div {
+  font-size: 1rem;
+}
+p {
+  font-size: 1rem;
+}
+h1 {
+  font-size: 4rem;
+  line-height: 2;
+}
+h2 {
+  font-size: 2rem;
+  line-height: 2.5;
+}
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+a:hover {
+  text-decoration: none;
+}
+.section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.container-top-bar {
+  background-repeat: repeat-x;
+  background-position: center;
+  background: linear-gradient(#1e6297, #0f4b79, #033961, #033961, #033961, #033961);
+}
+@media only screen and (max-width: 600px) {
+  .container-top-bar {
+    background: linear-gradient(#3389ca, #1e6196, #063e67, #043a62, #033961, #033961, #033960);
+  }
+}
+.switch-button {
+  display: block;
+  width: 130px;
+  padding: 5px 10px;
+  border: 1px solid #ffffff;
+}
+.switch-button a {
+  position: relative;
+  padding: 5px 0px 5px 35px;
+  background-image: url("http://steelthemes.com/demo/html/Dentalcare/assets/language-switcher/1gb.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+.switch-button a span {
+  position: absolute;
+}
+.switch-button a span:before {
+  content: '\f107';
+  font-family: FontAwesome;
+  position: absolute;
+  color: #ffffff;
+  top: 0px;
+  right: -15px;
+}
+.switch-button a:hover {
+  text-decoration: none;
+}
+.switch-button a:focus {
+  box-shadow: none;
+  text-decoration: none;
+}
+.top-bar-left {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .top-bar-left {
+    justify-content: center;
+  }
+}
+.top-bar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-bar-center img {
+  display: block;
+}
+.top-bar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .top-bar-right {
+    justify-content: center;
+  }
+}
+.top-bar-right ul li {
+  float: left;
+  padding: 10px;
+}
+.top-bar-right ul li:last-child {
+  padding-right: 0;
+}
+.top-bar-right ul li a {
+  color: #ffffff;
+}
+.menu-bar .insize-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 960px) {
+}
+@media only screen and (max-width: 960px) {
+  .menu-bar {
+    padding: 10px 0;
+  }
+}
+.menu-bar .btn-mobile-menu {
+  border-radius: 5px;
+  display: none;
+  border: 1px solid #000000;
+  padding: 5px;
+}
+.menu-bar .btn-mobile-menu i {
+  color: #000000;
+}
+@media only screen and (max-width: 960px) {
+  .menu-bar .btn-mobile-menu {
+    display: inline-block;
+  }
+}
+.menu-bar .search-bar {
+  display: inline-block;
+  position: relative;
+}
+.menu-bar .search-bar input {
+  height: 30px;
+  width: 200px;
+  padding-left: 10px;
+  border-color: #000000;
+  margin-right: -3px;
+  font-size: 13px;
+}
+.menu-bar .search-bar input:focus {
+  outline-color: #209fd6;
+  border-color: #209fd6;
+}
+.menu-bar .search-bar input:focus + i {
+  background: #209fd6;
+  border-color: #209fd6;
+}
+.menu-bar .search-bar i {
+  color: #ffffff;
+  border: 1px solid #000000;
+  padding: 6px;
+  background: #000000;
+  float: right;
+}
+.menu-bar .search-bar i:hover {
+  background: #209fd6;
+  border-color: #209fd6;
+}
+.menu-bar .navigation {
+  display: inline-block;
+}
+@media only screen and (max-width: 960px) {
+  .menu-bar .navigation {
+    display: none;
+  }
+}
+.menu-bar .navigation .submenu {
+  float: left;
+  position: relative;
+  margin-top: 0;
+  padding: 20px 20px;
+  margin-left: 2px;
+  line-height: 30px;
+}
+@media only screen and (max-width: 1280px) {
+  .menu-bar .navigation .submenu {
+    padding: 10px;
+  }
+}
+.menu-bar .navigation .submenu:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 1px;
+  height: 100%;
+  background: url("http://steelthemes.com/demo/html/Dentalcare/images/resources/menu-border.png") center center no-repeat;
+}
+.menu-bar .navigation .submenu:first-child {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+.menu-bar .navigation .submenu:hover .second-menu {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.menu-bar .navigation .submenu > a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 700;
+}
+.menu-bar .navigation .submenu > a:hover {
+  text-decoration: none;
+  color: #209fd6;
+}
+.menu-bar .navigation .submenu > a:focus {
+  box-shadow: none;
+}
+.menu-bar .navigation .submenu ul {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+  z-index: 10;
+  top: 140%;
+  left: 0;
+  padding: 0 20px;
+  transition: all 500ms ease;
+  background: #ffffff;
+}
+.menu-bar .navigation .submenu ul li {
+  width: 200px;
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(101, 100, 100, 0.2);
+}
+.menu-bar .navigation .submenu ul li a {
+  padding: 10px;
+  display: block;
+  padding-left: 0;
+  transition: all 0.5s;
+  color: #000000;
+}
+.menu-bar .navigation .submenu ul li a:hover {
+  text-decoration: none;
+}
+.menu-bar .navigation .submenu ul li a:focus {
+  box-shadow: none;
+}
+.menu-bar .navigation .submenu ul li:hover a {
+  padding-left: 20px;
+  background: #209fd6;
+  color: #ffffff;
+}
+.menu-bar .navigation .submenu input {
+  height: 30px;
+  width: 200px;
+  padding-left: 30px;
+  border-color: #000000;
+  border-radius: 15px;
+}
+.menu-bar .navigation .submenu input:focus {
+  outline: none;
+}
+.menu-bar .navigation .submenu i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+.menu-bar .activeMobile {
+  display: block !important;
+}
+.menu-bar .moble-menu-bar {
+  display: none;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 960px) {
+  .menu-bar .moble-menu-bar {
+    display: none !important;
+  }
+}
+.menu-bar .moble-menu-bar ul .submenu {
+  position: relative;
+  margin-top: 0;
+  background: #209fd6;
+  border-top: 1px solid #2c4ca5;
+}
+.menu-bar .moble-menu-bar ul .submenu:hover {
+  background: #2c4ca5;
+}
+.menu-bar .moble-menu-bar ul .submenu .btn-show {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  border: 1px solid #ffffff;
+  z-index: 10;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+.menu-bar .moble-menu-bar ul .submenu .btn-show i {
+  font-size: 20px;
+  color: #ffffff;
+}
+.menu-bar .moble-menu-bar ul .submenu a {
+  padding: 10px;
+  display: block;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.menu-bar .moble-menu-bar ul .submenu ul {
+  padding-left: 15px;
+  padding-right: 15px;
+  list-style-type: none;
+  margin: 0;
+  background: #027baf;
+}
+.menu-bar .moble-menu-bar ul .submenu ul li {
+  border-top: 1px solid #ffffff;
+  margin-top: 0;
+  background: #209fd6;
+}
+.menu-bar .moble-menu-bar ul .submenu ul li a {
+  color: #000000;
+}
+.menu-bar .moble-menu-bar ul .submenu ul li:hover {
+  background: #2c4ca5;
+}
+.menu-bar .moble-menu-bar ul .submenu ul li:hover a {
+  color: #ffffff;
+}
+.bottom-menu-bar {
+  background: #2c4ca5;
+}
+.bottom-menu-bar .contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 960px) {
+  .bottom-menu-bar .contact-info {
+    flex-direction: column;
+  }
+}
+.bottom-menu-bar .contact-info li {
+  float: left;
+  margin-top: 0;
+  padding: 10px;
+}
+.bottom-menu-bar .contact-info li:last-child {
+  padding-right: 0;
+}
+.bottom-menu-bar .contact-info li:first-child {
+  padding-left: 0;
+}
+@media only screen and (max-width: 960px) {
+  .bottom-menu-bar .contact-info li:first-child {
+    padding-left: 10px;
+  }
+}
+.bottom-menu-bar .contact-info li .icon-holder {
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 0;
+  border-right: 1px solid #209fd6;
+}
+@media only screen and (max-width: 960px) {
+  .bottom-menu-bar .contact-info li .icon-holder {
+    width: 30px;
+  }
+}
+.bottom-menu-bar .contact-info li .icon-holder i {
+  color: #ffffff;
+  font-size: 1.125em;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 960px) {
+  .bottom-menu-bar .contact-info li .icon-holder i {
+    font-size: 1em;
+    line-height: 1.25;
+  }
+}
+.bottom-menu-bar .contact-info li .text {
+  display: inline-block;
+  margin-left: 5px;
+}
+.bottom-menu-bar .contact-info li .text h3 {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media only screen and (max-width: 960px) {
+  .bottom-menu-bar .contact-info li .text h3 {
+    font-size: 1em;
+    line-height: 1.25;
+  }
+}
+.slide .btn-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #ffffff;
+  padding: 10px;
+}
+.slide .btn-control i {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 22px;
+}
+.slide .info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 200px;
+  color: #ffffff;
+}
+.slide .info .info-slide {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+}
+.slide .info .info-slide h1 {
+  font-weight: bold;
+}
+.slide .back-slide-btn {
+  left: 10px;
+}
+.slide .next-slide-btn {
+  right: 10px;
+}
+.slide .slide-img-bg-1 {
+  height: 500px;
+  background-image: url("http://steelthemes.com/demo/html/Dentalcare/images/slides/1.jpg");
+}
+.slide .slide-img-bg-2 {
+  height: 500px;
+  background-image: url("http://steelthemes.com/demo/html/Dentalcare/images/slides/2.jpg");
+}
+.slide .slide-img-bg-3 {
+  height: 500px;
+  background-image: url("http://steelthemes.com/demo/html/Dentalcare/images/slides/3.jpg");
+}
+.slide ul {
+  position: relative;
+  height: 500px;
+}
+.slide ul li {
+  position: absolute;
+  margin-top: 0;
+  width: 100%;
+}
+.title-section {
+  width: 100%;
+}
+.title-section h2 {
+  text-align: center;
+  position: relative;
+  color: #000000;
+}
+.title-section h2:after {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 30px;
+  height: 3px;
+  margin-left: -15px;
+  content: '';
+  background: #000000;
+}
+.welcome {
+  background: #f3fbff;
+}
+.welcome .title-section {
+  width: 100%;
+}
+.welcome .title-section h2 {
+  text-align: center;
+  position: relative;
+  color: #000000;
+}
+.welcome .title-section h2:after {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 30px;
+  height: 3px;
+  margin-left: -15px;
+  content: '';
+  background: #000000;
+}
+.welcome .list-show {
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+  color: #000000;
+}
+.welcome .list-show .single-item {
+  margin-bottom: 10px;
+  padding: 30px 15px;
+  box-shadow: 0px 1px 10px 1px #dfe4e7;
+}
+.welcome .list-show .icon-holder {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.welcome .list-show .icon-holder i:before {
+  font-size: 60px;
+  color: #209fd6;
+}
+.welcome .list-show .text-holder {
+  text-align: center;
+}
+.welcome .list-show .text-holder h3 {
+  margin-bottom: 15px;
+}
+.welcome .list-show .text-holder p {
+  color: #949494;
+}

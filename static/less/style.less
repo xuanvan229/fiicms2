@@ -1,0 +1,500 @@
+@import "reset.less";
+@import "variable.less";
+@import "base.less";
+// Header
+.container-top-bar{
+	// background-image: url("http://www.anvicare.com/images/bg_top.gif");
+    background-repeat: repeat-x;
+    background-position: center;
+   	background: linear-gradient(#1e6297,#0f4b79,#033961,#033961,#033961,#033961);
+   	@media only screen and (max-width: @size-sm){
+   		 background: linear-gradient(#3389ca, #1e6196,#063e67, #043a62, #033961, #033961, #033960);
+   	}
+}
+.switch-button{
+	display: block;
+	width: 130px;
+	padding: 5px 10px;
+	border:1px solid @white;
+	a{
+		position: relative;
+		padding: 5px 0px 5px 35px;
+		background-image: url("http://steelthemes.com/demo/html/Dentalcare/assets/language-switcher/1gb.png");
+		background-position: left center; 
+		background-repeat: no-repeat;
+		color : @white;
+		span{
+			position: absolute;
+		}
+		span:before{
+			content: '\f107';
+		    font-family: FontAwesome;
+		    position: absolute;
+		    color: @white;
+		    top: 0px;
+		    right: -15px;
+		}
+		&:hover{
+			text-decoration: none;
+		}
+		&:focus{
+			box-shadow: none;
+			text-decoration: none;
+		}
+	}
+}
+.top-bar-left{
+	display: flex;
+	align-items: center;
+	@media only screen and (max-width: @size-sm){
+		justify-content: center;
+	}
+}
+.top-bar-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img{
+		display: block;
+	}
+
+}
+.top-bar-right{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	@media only screen and (max-width: @size-sm){
+		justify-content: center;
+	}
+	ul{
+		li{
+			float:left;
+			padding: 10px;
+			&:last-child{
+				padding-right: 0;
+			}
+			a{
+				color: @white;
+				i{
+
+				}
+			}
+		}
+	}
+}
+
+//menu-bar
+.menu-bar{
+	.insize-bar{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media only screen and (max-width: @size-lg){
+			// display: block;
+		}	
+	}
+	@media only screen and (max-width: @size-lg){
+			padding: 10px 0;
+	}
+	.btn-mobile-menu{
+		border-radius: 5px;
+		display: none;
+		border:1px solid @black;
+		padding:5px;
+		i{
+			color:@black;
+		}
+		@media only screen and (max-width: @size-lg){
+			display: inline-block;
+		}
+	}
+	.search-bar{
+		display: inline-block;
+		position: relative;
+		input{
+				height: 30px;
+				width: 200px;
+				padding-left: 10px;
+				border-color: @black;
+				margin-right: -3px;
+				font-size:13px;
+				&:focus{
+					outline-color:@site-color-bg;
+					border-color: @site-color-bg;
+				}
+				&:focus + i{
+					background: @site-color-bg;
+			    	border-color: @site-color-bg;
+				}
+			}
+			i{
+				color: @white;
+			    border: 1px solid @black;
+			    padding: 6px;
+			    background: @black;
+			    float:right;
+			    &:hover{
+			    	background: @site-color-bg;
+			    	border-color: @site-color-bg;
+			    }
+			}
+	}
+	.navigation{
+		display: inline-block;
+		@media only screen and (max-width: @size-lg){
+			display: none;
+		}
+		.submenu{
+			float:left;
+			position: relative;
+			margin-top: 0;
+			padding:20px 20px;
+			margin-left: 2px;
+			line-height: 30px;
+			@media only screen and (max-width: @size-xl){
+				padding:10px;
+			}
+			&:before{
+				content: '';
+			    position: absolute;
+			    top: 0;
+			    right: -1px;
+			    width: 1px;
+			    height: 100%;
+			    background: url("http://steelthemes.com/demo/html/Dentalcare/images/resources/menu-border.png") center center no-repeat;
+			}
+			&:first-child{
+				padding-left: 0px;
+				margin-left: 0px;
+			}
+			// &:last-child{
+			// 	float:right;
+			// 	line-height: 20px;
+			// }
+			&:hover .second-menu {
+					opacity: 1;
+					top: 100%;
+					visibility: visible;
+			}
+			>a{
+				text-transform: uppercase;
+				color: @black;
+				font-weight: 700;
+				&:hover{
+					text-decoration: none;
+					color: @site-color-bg;
+				}
+				&:focus {
+					box-shadow: none;
+				}
+
+			}
+			ul{
+				position: absolute;
+				opacity: 0;
+				visibility: hidden;
+				margin:0;
+				z-index: 10;
+				top: 140%;
+				left: 0;
+				padding: 0 20px;
+				transition: all 500ms ease;
+				background: @white;
+				li{
+					width: 200px;
+					list-style: none;
+					margin-top: 0;
+					padding:0;
+					border-bottom: 1px solid @border-color-light;
+					a{
+						padding: 10px;
+						display: block;
+						padding-left: 0;
+						transition: all 0.5s;
+						color: @black;
+						&:hover{
+							text-decoration: none;
+						}
+						&:focus {
+							box-shadow: none;
+						}
+					}
+					&:hover a{
+						padding-left: 20px;
+						background: @site-color-bg;
+						color: @white;
+					}
+				}
+			}
+			input{
+				height: 30px;
+				width: 200px;
+				padding-left: 30px;
+				border-color: @black;
+				border-radius: 15px;
+				&:focus{
+					outline:none;
+				}
+			}
+			i{
+				position: absolute;
+				top: 50%;
+			    transform: translateY(-50%);
+			    left: 25px
+			}
+		}
+
+	}
+	.activeMobile{
+		display: block !important;
+	}
+	.moble-menu-bar{
+		display: none;
+		margin-top: 10px;
+		@media only screen and (min-width: @size-lg){
+				display: none !important;
+			}
+		ul{
+			.submenu{
+				position: relative;
+				margin-top: 0;
+				background: @site-color-bg;
+				border-top:1px solid @site-color1;
+				&:hover {
+					background: @site-color1;
+				}
+				.btn-show{
+					position: absolute;
+					right: 10px;
+					top: 2px;
+					border: 1px solid @white;
+					z-index: 10;
+					padding: 5px 7px;
+					border-radius: 5px;
+					i{
+						font-size:20px;
+						color: @white;
+					}
+				}
+				a{
+					padding:10px;
+					display: block;
+					color: @white;
+					text-transform: uppercase;
+
+				}
+				ul{
+					padding-left:15px;
+					padding-right: 15px;
+					list-style-type: none;
+					margin: 0;
+					background: @site-color-bg2;
+					li{
+						border-top:1px solid @white;
+						margin-top: 0;
+						background: @site-color-bg;
+						a{
+							color: @black;
+						}
+						&:hover{
+							background: @site-color1;
+
+						}
+						&:hover a{
+							color: @white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//bottom-menu-bar
+.bottom-menu-bar{
+	background: @site-color1;
+	.contact-info{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		@media only screen and (max-width: @size-lg){
+				flex-direction: column;
+			}
+		li{
+			float:left;
+			margin-top: 0;
+			padding:10px;
+			&:last-child{
+				padding-right: 0;
+			}
+			&:first-child{
+				padding-left: 0;
+				@media only screen and (max-width: @size-lg){
+					padding-left: 10px;
+				}
+			}
+			.icon-holder{
+				display: inline-block;
+				padding-right: 20px;
+				padding-left: 0;
+				border-right: 1px solid @site-color-bg;
+				@media only screen and (max-width: @size-lg){
+					width: 30px;
+				}
+				i{
+					color:@white;
+					font-size: 1.125em;
+					line-height: 1.5;
+					@media only screen and (max-width: @size-lg){
+						font-size: 1em;
+						line-height: 1.25;
+					}
+				}
+			}
+			.text{
+				display: inline-block;
+				margin-left: 5px;
+				h3{
+					text-transform: uppercase;
+					color:@white;
+					@media only screen and (max-width: @size-lg){
+						font-size: 1em;
+						line-height: 1.25;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//slide
+.slide{
+	.btn-control{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		border: 1px solid @white;
+	    padding: 10px;
+	    i{
+	    	color:@white;
+	    	font-size: 20px;
+    		line-height: 22px;
+	    }
+	}
+	.info{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 200px;
+		color:@white;
+		.info-slide{
+			background: @color-trans ;
+			padding:30px;
+			h1{
+				font-weight: bold;
+			}
+		}
+	}
+	.back-slide-btn{
+		left: 10px;
+	}
+	.next-slide-btn {
+		right: 10px
+	}
+	.slide-img-bg-1{
+		height: 500px;
+		background-image: url("http://steelthemes.com/demo/html/Dentalcare/images/slides/1.jpg");
+	}
+	.slide-img-bg-2{
+		height: 500px;
+		background-image: url("http://steelthemes.com/demo/html/Dentalcare/images/slides/2.jpg");
+	}
+	.slide-img-bg-3{
+		height: 500px;
+		background-image: url("http://steelthemes.com/demo/html/Dentalcare/images/slides/3.jpg");
+	}
+	ul{
+		position: relative;
+		height: 500px;
+		li{
+			position: absolute;
+			margin-top: 0;
+			width: 100%;
+		}
+	}
+}
+
+.title-section{
+		width: 100%;
+		h2{
+		text-align: center;
+		position: relative;
+		color: @black;
+		&:after{
+			position: absolute;
+		    bottom: -1px;
+		    left: 50%;
+		    width: 30px;
+		    height: 3px;
+		    margin-left: -15px;
+		    content: '';
+		    background: @black;
+		}
+	}
+	}
+//welcome
+.welcome{
+	background:@background-light-blue;
+	
+	.title-section{
+		width: 100%;
+		h2{
+		text-align: center;
+		position: relative;
+		color: @black;
+		&:after{
+			position: absolute;
+		    bottom: -1px;
+		    left: 50%;
+		    width: 30px;
+		    height: 3px;
+		    margin-left: -15px;
+		    content: '';
+		    background: @black;
+		}
+	}
+	}
+	.list-show{
+		display: flex;
+	    display: -ms-flexbox;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+		width: 100%;
+		margin-top: 30px;
+		color:@black;
+		.single-item{
+			margin-bottom: 10px;
+			padding: 30px 15px;
+			box-shadow: 0px 1px 10px 1px rgba(223,228,231,1);
+		}
+		.icon-holder{
+			text-align: center;
+			margin-bottom: 15px;
+			i:before{
+				font-size: 60px;
+				color: @site-color-bg;
+			}
+		}
+		.text-holder{
+			text-align: center;
+			h3{
+				margin-bottom: 15px;
+			}
+			p{
+				color:#949494;
+			}
+		}
+	}
+}
